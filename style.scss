@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* PRIMARY COLORS */
+$dark-blue: hsl(233, 26%, 24%);
+$lime-green: hsl(136, 65%, 51%);
+$bright-cyan: hsl(192, 70%, 51%);
+
+/* NEUTRALS */
+$grayish-blue: hsl(233, 8%, 62%);
+$light-grayish-blue: hsl(220, 16%, 96%);
+$very-light-gray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    font-size: 18px;
+    font-family: "Public Sans", sans-serif;
+}
+
+header {
+    z-index: 10000000;
+    height: 70px;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    nav {
+        display: none;
+    }
+}
+
+a, 
+a:any-link {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+}
+
+p {
+    color: $grayish-blue;
+    line-height: 2rem;
+}
+
+button {
+    height: 35px;
+    width: 150px;
+    border-radius: 20px;
+    border: none;
+    color: $white;
+    background: linear-gradient(to right, $lime-green, $bright-cyan);
+    &:hover {
+        background: linear-gradient(to right,hsl(136, 84%, 65%), hsl(192, 81%, 75%));
+        cursor: pointer;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+
+.heading {
+    position: relative;
+    div.img-sec {
+        background: url(./images/bg-intro-mobile.svg) no-repeat;
+        background-size: 100vw 100vw;
+        margin-bottom: 50px;
+        padding: 0 5vw;
+        img {
+            position: relative;
+            margin-top: -30%;
+        }
+    }
+    .heading-text {
+        padding: 0 5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+    }
+}
+
+.why {
+    background-color: $light-grayish-blue;
+    margin: 40px 0;
+    text-align: center;
+    padding: 5vw 10vw;
+}
+
+.info-container,
+.card-container {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    article {
+        h3 {
+            margin: 30px 0;
+        }
+    }
+}
+
+#blog {
+    padding: 0 5vw;
+    background-color: $very-light-gray;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $white;
+    img {
+        border-radius: 5px 5px 0 0;
+        width: 100%;
+    }
+
+    .info {
+        padding: 20px;
+
+        p {
+            line-height: initial;
+        }
+        h4 {
+             margin: 10px 0;
+        } 
+    }
+}
+
+small {
+    color: $grayish-blue;
+    font-size: 0.8rem;
+}
+
+.underliner{
+    background: linear-gradient(to right, $lime-green, $bright-cyan);
+    height: 5px;
+    width: 10%;
+    position: absolute;
+    bottom: 0;
+}
+
+footer {
+    background-color: $dark-blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 5vw;
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        a {
+            color: $white;
+        }
+    }
+    .social-links {
+        display: flex;
+        gap: 15px;
+        
+        img:hover  {
+            cursor: pointer;
+            fill: $lime-green;
+        }
+    }
+
+    .last, .links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        color: $grayish-blue;
+    }
+}
+
+.footer-logo {
+    background-color: $white;
+    
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        font-size: 0.8rem;
+        font-weight: 400;
+        position: sticky;
+        .burger {
+            display: none;
+        }
+
+        nav {
+            display: flex;
+            width: 70%;
+            justify-content: space-between;
+            align-items: center;
+
+            ul {
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 60%;
+
+                a {
+                    color: $grayish-blue;
+                    &:hover {
+                        color: $dark-blue;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    .heading {
+        display: flex;
+        flex-direction: row-reverse;
+        background-color:  $very-light-gray;
+        div.img-sec {
+        background: url(./images/bg-intro-desktop.svg) no-repeat;
+        background-size: 130%;
+        background-position: bottom -30% left -50%;
+        overflow: hidden;
+            img {
+                float: right;
+                position: relative;
+                margin-top: -20%;
+                margin-right: -30%;
+                
+            }
+        }
+        .heading-text {
+            padding: 0 5vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+            width: 70%;
+        }
+    }
+    
+    .why {
+    padding: 5vw;
+    text-align: left;
+    
+    .heading-why {
+        width: 50%;
+        margin-bottom: 50px;
+    }
+
+    }
+    .info-container,
+    .card-container {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        img {
+            max-height: 160px;
+        }
+    }
+
+    footer {
+        padding: 5vw;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 2fr;
+
+        .last {
+            grid-column: 4 / 5;
+        }
+
+        nav {
+            grid-column: 2 / 4;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+}
