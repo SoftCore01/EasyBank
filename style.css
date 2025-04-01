@@ -24,7 +24,7 @@ header {
   top: 0;
   left: 0;
 }
-header nav {
+header .reg {
   display: none;
 }
 
@@ -183,6 +183,38 @@ footer .last, footer .links {
   background-color: hsl(0, 0%, 100%);
 }
 
+.popup {
+  display: none;
+  position: absolute;
+  background-color: hsl(0, 0%, 100%);
+  width: 90vw;
+  border-radius: 5px;
+  padding: 5vw;
+  top: 20vh;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: -7px 32px 204px 5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -7px 32px 204px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -7px 32px 204px 5px rgba(0, 0, 0, 0.75);
+}
+.popup button {
+  display: none;
+}
+.popup ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.popup ul a {
+  color: hsl(233, 26%, 24%);
+}
+.popup ul a:hover {
+  color: hsl(233, 26%, 24%);
+  font-weight: 700;
+}
+
 @media screen and (min-width: 768px) {
   header {
     font-size: 0.8rem;
@@ -192,23 +224,23 @@ footer .last, footer .links {
   header .burger {
     display: none;
   }
-  header nav {
+  header .reg {
     display: flex;
     width: 70%;
     justify-content: space-between;
     align-items: center;
   }
-  header nav ul {
+  header .reg ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 60%;
   }
-  header nav ul a {
+  header .reg ul a {
     color: hsl(233, 8%, 62%);
   }
-  header nav ul a:hover {
+  header .reg ul a:hover {
     color: hsl(233, 26%, 24%);
     font-weight: 700;
   }
@@ -267,5 +299,8 @@ footer .last, footer .links {
     grid-column: 2/4;
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+  .popup {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
