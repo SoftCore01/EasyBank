@@ -190,7 +190,7 @@ footer .last, footer .links {
   width: 90vw;
   border-radius: 5px;
   padding: 5vw;
-  top: 20vh;
+  top: 15vh;
   left: 50%;
   transform: translateX(-50%);
   box-shadow: -7px 32px 204px 5px rgba(0, 0, 0, 0.75);
